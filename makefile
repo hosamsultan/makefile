@@ -17,3 +17,6 @@ all.exe : $(obj) $(variable)
 # compile headers & sources
 %.o : %.c 
 	$(cc) -c $(CFLAGS) $< -o $@
+
+clear :  
+	del  $(src_path)\*.o $(src_path)\*.d
