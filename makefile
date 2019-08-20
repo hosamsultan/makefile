@@ -10,3 +10,10 @@ obj = $(source:.c=.o)
 
 variable = nancy-ali-taha-hossam.o
 CFLAGS = -I$(Include_path)
+
+all.exe : $(obj) $(variable)
+	$(cc) $^ -o $@ 
+
+# compile headers & sources
+%.o : %.c 
+	$(cc) -c $(CFLAGS) $< -o $@
